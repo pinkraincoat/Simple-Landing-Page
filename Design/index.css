@@ -1,34 +1,111 @@
-body{
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-image: url("/Assets/Image/BackGround.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
 }
 
-h1{
+/* Hero section layout */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Typography - Desktop */
+.hero-title {
     font-size: 60px;
-    font-family: "Inter", sans-serif;
+    font-weight: 600;
     color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-p{
+.hero-description {
     font-size: 25px;
-    font-family: "Inter", sans-serif;
-    color:lightgrey;   
+    color: white;
+    opacity: 0.5;
+    margin-bottom: 2rem;
+    line-height: 1.4;
 }
 
-img[src*="Twitter.svg"]{
+/* Social icons */
+.social-icons {
+    display: flex;
+
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
     filter: brightness(0) invert(1);
 }
 
-img[src*="Instagram.svg"]{
-    filter: brightness(0) invert(1);
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 45px;
+    }
+    
+    .hero-description {
+        font-size: 20px;
+    }
+    
+    .social-icons {
+        gap: 0.8rem;
+    }
+    
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
 }
 
-img[src*="Facebook.svg"]{
-    filter: brightness(0) invert(1);
-}
-
-img[src*="LinkedIn.svg"]{
-    filter: brightness(0) invert(1);
+/* Mobile styles */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-icons {
+        gap: 0.6rem;
+    }
+    
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
 }
